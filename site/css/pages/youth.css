@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Range & Motion — Youth Athletes Page Styles
+   ========================================================================== */
+
+/* ── Hero ── */
+.youth-hero {
+  height: 60vh;
+  min-height: 420px;
+}
+
+/* ── Intro Grid ── */
+.youth-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .youth-intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+/* Parent callout box */
+.youth-parent-callout {
+  background: var(--color-sand);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  border-left: 3px solid var(--color-sage);
+}
+
+.youth-parent-callout h3 {
+  font-size: var(--size-lg);
+  margin-bottom: var(--space-4);
+  color: var(--color-navy);
+}
+
+.youth-parent-callout p {
+  font-size: var(--size-base);
+  color: rgba(13, 27, 42, 0.75);
+  line-height: var(--leading-loose);
+}
+
+/* ── Stats (Why It Matters) ── */
+.youth-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-16);
+}
+
+@media (max-width: 768px) {
+  .youth-stats-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.youth-stat {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  border-top: 2px solid var(--color-sage);
+}
+
+.youth-stat-number {
+  font-family: var(--font-headline);
+  font-size: var(--size-4xl);
+  font-weight: var(--weight-black);
+  color: var(--color-navy);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+}
+
+.youth-stat-desc {
+  font-size: var(--size-sm);
+  color: rgba(13, 27, 42, 0.65);
+  line-height: var(--leading-normal);
+}
+
+/* ── Pillars grid ── */
+.youth-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .youth-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Session layout ── */
+.youth-session-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .youth-session-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.youth-session-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+  .youth-session-img {
+    height: 320px;
+  }
+}
+
+/* ── Session timeline ── */
+.youth-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--space-8);
+}
+
+.youth-timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+  position: relative;
+}
+
+.youth-timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 38px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-sage);
+  opacity: 0.3;
+}
+
+.youth-timeline-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  color: var(--color-white);
+  font-family: var(--font-headline);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.youth-timeline-body h4 {
+  font-size: var(--size-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.youth-timeline-body p {
+  font-size: var(--size-sm);
+  color: rgba(13, 27, 42, 0.65);
+  line-height: var(--leading-normal);
+}
+
+/* ── Parents section ── */
+.youth-parents-quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-lg);
+  line-height: var(--leading-loose);
+  color: var(--color-navy);
+  max-width: 680px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+
+.youth-benefit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+@media (max-width: 768px) {
+  .youth-benefit-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.youth-benefit-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.youth-benefit-card-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-sage);
+  margin: 0 auto var(--space-4);
+}
+
+.youth-benefit-card h3 {
+  font-size: var(--size-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.youth-benefit-card p {
+  font-size: var(--size-sm);
+  color: rgba(13, 27, 42, 0.65);
+  line-height: var(--leading-normal);
+}
+
+/* ── Bottom CTA ── */
+.youth-cta-sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-md);
+  color: rgba(242, 233, 216, 0.70);
+  max-width: 560px;
+  margin: var(--space-5) auto var(--space-10);
+  text-align: center;
+}

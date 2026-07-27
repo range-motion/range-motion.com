@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Range & Motion — MIOS Page Styles
+   ========================================================================== */
+
+/* ── Hero (navy, no image) ── */
+.mios-hero-sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-xl);
+  color: rgba(242, 233, 216, 0.70);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-snug);
+}
+
+.mios-hero-body {
+  font-size: var(--size-base);
+  color: rgba(242, 233, 216, 0.60);
+  max-width: 560px;
+  line-height: var(--leading-loose);
+}
+
+/* ── Sage divider ── */
+.divider-sage {
+  width: 56px;
+  height: 2px;
+  background: var(--color-sage);
+  border: none;
+  margin: var(--space-10) auto;
+}
+
+/* ── MIOS difference intro ── */
+.mios-intro-body {
+  font-size: var(--size-md);
+  color: rgba(13, 27, 42, 0.70);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: var(--leading-loose);
+  text-align: center;
+}
+
+/* ── Capabilities grid ── */
+.mios-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .mios-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mios-capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Tech + Human (navy) ── */
+.mios-commitment-text {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.mios-commitment-h2 {
+  font-size: var(--size-4xl);
+  color: var(--color-sand);
+  text-align: center;
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .mios-commitment-h2 {
+    font-size: var(--size-2xl);
+  }
+}
+
+.mios-commitment-body {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-lg);
+  color: rgba(242, 233, 216, 0.75);
+  line-height: var(--leading-loose);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ── Dashboard section ── */
+.mios-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .mios-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.mios-device-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px rgba(13, 27, 42, 0.14);
+}
+
+.mios-coming-soon {
+  margin-top: var(--space-8);
+  padding: var(--space-6) var(--space-8);
+  border: 1px solid var(--color-sage);
+  border-radius: var(--radius-lg);
+  background: rgba(111, 167, 138, 0.05);
+}
+
+.mios-coming-soon p {
+  font-size: var(--size-sm);
+  color: rgba(13, 27, 42, 0.70);
+  line-height: var(--leading-loose);
+}
+
+.mios-coming-soon strong {
+  font-family: var(--font-headline);
+  font-weight: var(--weight-semibold);
+  color: var(--color-navy);
+}
+
+/* ── First touchpoint (sage-tint) ── */
+.mios-touchpoint-body {
+  font-size: var(--size-md);
+  color: rgba(13, 27, 42, 0.70);
+  max-width: 600px;
+  margin: 0 auto var(--space-10);
+  line-height: var(--leading-loose);
+  text-align: center;
+}
+
+/* ── Bottom CTA ── */
+.mios-cta-sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-md);
+  color: rgba(242, 233, 216, 0.65);
+  max-width: 520px;
+  margin: var(--space-5) auto var(--space-10);
+  text-align: center;
+  line-height: var(--leading-loose);
+}

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Range & Motion — Memberships Page Styles
+   ========================================================================== */
+
+/* ── Memberships Grid ── */
+
+.memberships-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 1100px) {
+  .memberships-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .memberships-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Corporate card spans full width on last row when odd count */
+.memberships-grid .card-tier:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .memberships-grid .card-tier:last-child:nth-child(odd) {
+    grid-column: 1;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* ── Tier card overrides ── */
+
+.card-tier-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.card-tier-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.card-tier-tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-sm);
+  color: rgba(13, 27, 42, 0.55);
+  line-height: var(--leading-snug);
+}
+
+/* ── How Steps (membership variant) ── */
+
+.how-step-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition:
+    box-shadow var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.how-step-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* ── Philosophy section ── */
+
+.philosophy-body {
+  font-family: var(--font-body);
+  font-size: var(--size-md);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.75);
+  max-width: 680px;
+  margin: var(--space-6) auto 0;
+  text-align: center;
+}
+
+.philosophy-cta {
+  margin-top: var(--space-10);
+  text-align: center;
+}
+
+/* ── Bottom CTA ── */
+
+.memberships-bottom-cta {
+  text-align: center;
+}
+
+.memberships-bottom-cta h2 {
+  color: var(--color-sand);
+  margin-bottom: var(--space-5);
+}
+
+.memberships-bottom-cta .cta-sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--size-md);
+  color: rgba(242, 233, 216, 0.75);
+  margin-bottom: var(--space-10);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── FAQ surface override (sand bg) ── */
+
+.surface-sand .faq-item {
+  border-color: rgba(13, 27, 42, 0.12);
+}
+
+.surface-sand .faq-question {
+  background: var(--color-off-white);
+}
+
+.surface-sand .faq-question:hover {
+  background: var(--color-white);
+}
+
+.surface-sand .faq-answer {
+  background: var(--color-off-white);
+}

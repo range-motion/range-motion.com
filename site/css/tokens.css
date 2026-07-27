@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Range & Motion — Design Tokens
+   Canonical source of truth for all brand values.
+   ========================================================================== */
+
+:root {
+  /* ── Colors ── */
+  --color-navy:         #0D1B2A;
+  --color-sage:         #6FA78A;
+  --color-teal:         #4DB6AC;
+  --color-warm-gray:    #8ABF98;
+  --color-sand:         #F2E9D8;
+  --color-hibiscus:     #C0395A;
+  --color-copper:       #B87333;
+  --color-white:        #FFFFFF;
+  --color-off-white:    #FAFAF8;
+  --color-navy-80:      rgba(13, 27, 42, 0.80);
+  --color-navy-55:      rgba(13, 27, 42, 0.55);
+  --color-navy-30:      rgba(13, 27, 42, 0.30);
+  --color-navy-10:      rgba(13, 27, 42, 0.10);
+  --color-sage-tint:    rgba(111, 167, 138, 0.08);
+  --color-sage-light:   rgba(111, 167, 138, 0.18);
+  --color-sand-dark:    #E8DCCA;
+
+  /* ── Typography ── */
+  --font-headline: 'Montserrat', sans-serif;
+  --font-body:     'Lora', serif;
+
+  /* Type scale */
+  --size-xs:   0.75rem;    /*  12px */
+  --size-sm:   0.875rem;   /*  14px */
+  --size-base: 1rem;       /*  16px */
+  --size-md:   1.125rem;   /*  18px */
+  --size-lg:   1.375rem;   /*  22px */
+  --size-xl:   1.75rem;    /*  28px */
+  --size-2xl:  2.25rem;    /*  36px */
+  --size-3xl:  3rem;       /*  48px */
+  --size-4xl:  3.75rem;    /*  60px */
+  --size-5xl:  4.5rem;     /*  72px */
+
+  /* Font weights */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* Line heights */
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  /* Letter spacing */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.2em;
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  /* ── Layout ── */
+  --max-width:        1280px;
+  --max-width-narrow: 800px;
+  --max-width-wide:   1440px;
+
+  /* ── Borders ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 1px 3px rgba(13,27,42,0.06), 0 1px 2px rgba(13,27,42,0.04);
+  --shadow-md:  0 4px 16px rgba(13,27,42,0.08), 0 2px 6px rgba(13,27,42,0.05);
+  --shadow-lg:  0 12px 40px rgba(13,27,42,0.10), 0 4px 12px rgba(13,27,42,0.06);
+  --shadow-xl:  0 24px 64px rgba(13,27,42,0.14), 0 8px 20px rgba(13,27,42,0.08);
+
+  /* ── Transitions ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   600ms;
+  --duration-reveal: 800ms;
+}

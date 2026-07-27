@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Range & Motion — Recovery Page Styles
+   ========================================================================== */
+
+/* ── Philosophy (centered) ── */
+
+.recovery-philosophy {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.recovery-philosophy h2 {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-philosophy-body {
+  font-size: var(--size-lg);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.72);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── Split layout ── */
+
+.recovery-split-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+  align-items: center;
+}
+
+.recovery-split--reverse .recovery-split-inner {
+  /* Content first in DOM, image second — no reorder needed at desktop */
+}
+
+@media (max-width: 900px) {
+  .recovery-split-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Always show image above content on mobile */
+  .recovery-split--reverse .recovery-split-image {
+    order: -1;
+  }
+}
+
+/* ── Image ── */
+
+.recovery-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+/* ── Content ── */
+
+.recovery-split-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.recovery-split-content h2 {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-body {
+  font-size: var(--size-md);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.75);
+  margin-bottom: var(--space-8);
+}
+
+/* ── Benefits list ── */
+
+.recovery-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.recovery-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-headline);
+  font-size: var(--size-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-navy);
+}
+
+.recovery-benefit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  flex-shrink: 0;
+}
+
+/* Sand surface text override */
+.surface-sand .recovery-body {
+  color: rgba(13, 27, 42, 0.72);
+}
+
+/* ── Amenities grid (two cards) ── */
+
+.recovery-amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .recovery-amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recovery-amenity-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.recovery-amenity-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.recovery-amenity-icon {
+  color: var(--color-sage);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-amenity-card h3 {
+  margin-bottom: var(--space-4);
+  font-size: var(--size-xl);
+}
+
+.recovery-amenity-card p {
+  font-size: var(--size-base);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.70);
+}
+
+/* ── Contrast therapy callout ── */
+
+.recovery-contrast-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.recovery-contrast-inner h2 {
+  color: var(--color-sand);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-contrast-body {
+  font-size: var(--size-md);
+  line-height: var(--leading-loose);
+  color: rgba(242, 233, 216, 0.75);
+  margin-bottom: var(--space-12);
+}
+
+/* Protocol diagram */
+.recovery-contrast-protocol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.contrast-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-8);
+  border-radius: var(--radius-lg);
+  min-width: 120px;
+}
+
+.contrast-step--heat {
+  background: rgba(184, 115, 51, 0.15);
+  border: 1px solid rgba(184, 115, 51, 0.30);
+}
+
+.contrast-step--cold {
+  background: rgba(77, 182, 172, 0.12);
+  border: 1px solid rgba(77, 182, 172, 0.25);
+}
+
+.contrast-step--repeat {
+  background: rgba(111, 167, 138, 0.12);
+  border: 1px solid rgba(111, 167, 138, 0.25);
+}
+
+.contrast-step-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-sage);
+  margin-bottom: var(--space-1);
+}
+
+.contrast-step--heat .contrast-step-icon {
+  color: var(--color-copper);
+}
+
+.contrast-step--cold .contrast-step-icon {
+  color: var(--color-teal);
+}
+
+.contrast-step-label {
+  font-family: var(--font-headline);
+  font-size: var(--size-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-sand);
+}
+
+.contrast-step-duration {
+  font-size: var(--size-xs);
+  color: rgba(242, 233, 216, 0.55);
+  font-family: var(--font-headline);
+  letter-spacing: var(--tracking-wide);
+}
+
+.contrast-arrow {
+  width: 24px;
+  height: 24px;
+  color: rgba(242, 233, 216, 0.30);
+  flex-shrink: 0;
+}
+
+.contrast-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 540px) {
+  .recovery-contrast-protocol {
+    gap: var(--space-3);
+  }
+
+  .contrast-step {
+    padding: var(--space-4) var(--space-5);
+    min-width: 100px;
+  }
+
+  .contrast-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ── Recovery memberships ── */
+
+.recovery-membership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+@media (max-width: 640px) {
+  .recovery-membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recovery-membership-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid transparent;
+  position: relative;
+  transition:
+    border-color var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.recovery-membership-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.recovery-membership-card--featured {
+  border-color: var(--color-sage);
+  box-shadow: var(--shadow-md);
+}
+
+.recovery-membership-card-badge {
+  position: absolute;
+  top: -1px;
+  right: var(--space-8);
+  background: var(--color-sage);
+  color: var(--color-white);
+  font-family: var(--font-headline);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-4);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.recovery-membership-card-icon {
+  color: var(--color-sage);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-membership-card h3 {
+  font-size: var(--size-xl);
+  margin-bottom: var(--space-4);
+}
+
+.recovery-membership-card > p {
+  font-size: var(--size-base);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.70);
+  margin-bottom: var(--space-6);
+}
+
+.recovery-membership-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.recovery-membership-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-headline);
+  font-size: var(--size-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-navy);
+}
+
+.recovery-membership-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  flex-shrink: 0;
+}
+
+.recovery-membership-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ── Bottom CTA ── */
+
+.recovery-bottom-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recovery-bottom-cta-inner h2 {
+  color: var(--color-sand);
+  margin-bottom: var(--space-10);
+}
+
+/* ── Mobile adjustments ── */
+
+@media (max-width: 600px) {
+  .recovery-membership-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .recovery-membership-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

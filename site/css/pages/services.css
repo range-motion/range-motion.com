@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Range & Motion — Services Page Styles
+   ========================================================================== */
+
+/* ── Split layout ── */
+
+.services-split {
+}
+
+.services-split-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+  align-items: center;
+}
+
+/* Reversed variant: content left, image right — swap visual order on desktop */
+.services-split--reverse .services-split-inner {
+  /* Content is first in the DOM; image is second. No reorder needed at desktop. */
+}
+
+@media (max-width: 900px) {
+  .services-split-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* On mobile, always show image above content */
+  .services-split--reverse .services-split-image {
+    order: -1;
+  }
+}
+
+/* ── Image ── */
+
+.services-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+/* ── Content ── */
+
+.services-split-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.services-split-content h2 {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.services-body {
+  font-size: var(--size-md);
+  line-height: var(--leading-loose);
+  color: rgba(13, 27, 42, 0.75);
+  margin-bottom: var(--space-8);
+}
+
+/* ── Feature list ── */
+
+.services-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.services-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-headline);
+  font-size: var(--size-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-navy);
+}
+
+.services-feature-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-sage);
+}
+
+/* ── CTA row ── */
+
+.services-cta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ── Bottom CTA section ── */
+
+.services-bottom-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.services-bottom-cta-inner h2 {
+  color: var(--color-sand);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.services-cta-sub {
+  font-size: var(--size-md);
+  line-height: var(--leading-loose);
+  color: rgba(242, 233, 216, 0.75);
+  margin-bottom: var(--space-10);
+}
+
+/* ── Surface-sand body text override ── */
+/* Ensure body text on sand background reads clearly */
+.surface-sand .services-body {
+  color: rgba(13, 27, 42, 0.72);
+}
+
+/* ── Responsive tweaks ── */
+
+@media (max-width: 600px) {
+  .services-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-cta-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
