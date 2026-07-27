@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Future additions (uncomment if/when applicable)
+# node_modules/
+# .env
